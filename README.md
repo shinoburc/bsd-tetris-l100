@@ -1,7 +1,15 @@
-## bsd-tetris-l100
+# bsd-tetris-l100
 
 BSD games tetris.
 Extention for more higher level which is 10 to 100.
+
+## Require
+
+```sh
+$ sudo apt install libncurses5-dev
+```
+
+## Usage
 
 ```sh
 $ tetris -h
@@ -14,3 +22,5 @@ usage: tetris-bsd [-hpPst] [-k keys] [-l level]
 	-k	Key configuration. Default is "jkl pq".
 	-l	Starting level(1 to 100). Default is 2.
 ```
+
+
