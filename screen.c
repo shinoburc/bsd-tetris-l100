@@ -287,6 +287,12 @@ scr_set()
 		    MINCOLS, MINROWS);
 		stop("");	/* stop() supplies \n */
 	}
+
+  if(showtopleft) {
+    Rows = MINROWS;
+    Cols = MINCOLS + 33;
+  }
+
 	if (tcgetattr(0, &oldtt) < 0)
 		stop("tcgetattr() fails");
 	newtt = oldtt;

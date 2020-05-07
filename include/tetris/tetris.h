@@ -173,6 +173,7 @@ extern gid_t	gid, egid;
 extern char	key_msg[100];
 extern int	showpreview;
 extern int	showpoint;
+extern int	showtopleft;
 
 int	fits_in __P((const struct shape *, int));
 void	place __P((const struct shape *, int, int));

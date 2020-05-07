@@ -78,6 +78,7 @@ gid_t	gid, egid;
 char	key_msg[100];
 int	showpreview;
 int	showpoint;
+int showtopleft;
 
 static	void	elide __P((void));
 static	void	setup_board __P((void));
@@ -152,7 +153,7 @@ main(argc, argv)
 
 	keys = "jkl pq";
 
-	while ((ch = getopt(argc, argv, "k:l:pPs")) != -1)
+	while ((ch = getopt(argc, argv, "k:l:pPst")) != -1)
 		switch(ch) {
 		case 'k':
 			if (strlen(keys = optarg) != 6)
@@ -174,6 +175,9 @@ main(argc, argv)
 		case 's':
 			showscores(0);
 			exit(0);
+		case 't':
+			showtopleft = 1;
+			break;
 		case '?':
 		default:
 			usage();
@@ -342,6 +346,6 @@ onintr(signo)
 void
 usage()
 {
-	(void)fprintf(stderr, "usage: tetris-bsd [-pPs] [-k keys] [-l level]\n");
+	(void)fprintf(stderr, "usage: tetris-bsd [-pPst] [-k keys] [-l level]\n");
 	exit(1);
 }
