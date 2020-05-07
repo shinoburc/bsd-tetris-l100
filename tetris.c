@@ -355,6 +355,7 @@ usage()
 	(void)fprintf(stderr, "\t-P\tdraw shape position(?)\n");
 	(void)fprintf(stderr, "\t-s\tShow high scores.\n");
 	(void)fprintf(stderr, "\t-t\tShow always top-left in any terminal size.\n");
+	(void)fprintf(stderr, "\t-k\tKey configuration. Default is \"jkl pq\".\n");
 	(void)fprintf(stderr, "\t-l\tStarting level(1 to 100). Default is 2.\n");
 	exit(1);
 }

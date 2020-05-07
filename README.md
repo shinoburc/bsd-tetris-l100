@@ -11,5 +11,6 @@ usage: tetris-bsd [-hpPst] [-k keys] [-l level]
 	-P	draw shape position(?)
 	-s	Show high scores.
 	-t	Show always top-left in any terminal size.
+	-k	Key configuration. Default is "jkl pq".
 	-l	Starting level(1 to 100). Default is 2.
 ```
