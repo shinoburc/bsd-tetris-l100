@@ -153,7 +153,7 @@ main(argc, argv)
 
 	keys = "jkl pq";
 
-	while ((ch = getopt(argc, argv, "k:l:pPst")) != -1)
+	while ((ch = getopt(argc, argv, "k:l:hpPst")) != -1)
 		switch(ch) {
 		case 'k':
 			if (strlen(keys = optarg) != 6)
@@ -166,6 +166,9 @@ main(argc, argv)
 				     MINLEVEL, MAXLEVEL);
 			}
 			break;
+		case 'h':
+			usage();
+      break;
 		case 'p':
 			showpreview = 1;
 			break;
@@ -346,7 +349,8 @@ onintr(signo)
 void
 usage()
 {
-	(void)fprintf(stderr, "usage: tetris-bsd [-pPst] [-k keys] [-l level]\n");
+	(void)fprintf(stderr, "usage: tetris-bsd [-hpPst] [-k keys] [-l level]\n");
+	(void)fprintf(stderr, "\t-h\tShow this usage.\n");
 	(void)fprintf(stderr, "\t-p\tShow next shape.\n");
 	(void)fprintf(stderr, "\t-P\tdraw shape position(?)\n");
 	(void)fprintf(stderr, "\t-s\tShow high scores.\n");
